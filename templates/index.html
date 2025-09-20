@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sumbangan Asas Rahmah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#e9f4f9;
+      --headline:#20285a;
+      --muted:#6b7280;
+      --btn-grad: linear-gradient(90deg,#e14b57 0%,#5a3be0 100%);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#111827;
+      overflow:hidden;
+    }
+
+    /* Background icons */
+    .bg-icon{
+      position:absolute;
+      width:76px;
+      height:76px;
+      opacity:0.12;
+      background-repeat:no-repeat;
+      background-size:contain;
+      filter:drop-shadow(0 0 0 rgba(255,255,255,0));
+    }
+    /* positions — tweak as desired */
+    .i1{left:7%; top:8%; background-image:url('/static/icons/bread.svg')}
+    .i2{right:10%; top:5%; background-image:url('/static/icons/eggs.svg')}
+    .i3{left:12%; bottom:18%; background-image:url('/static/icons/milk.svg')}
+    .i4{right:8%; bottom:14%; background-image:url('/static/icons/rice.svg')}
+    .i5{left:40%; top:22%; background-image:url('/static/icons/groceries.svg')}
+    .i6{right:36%; bottom:26%; background-image:url('/static/icons/snack.svg')}
+
+    /* Center content */
+    .wrap{
+      max-width:980px;
+      padding:40px 20px;
+      z-index:10;
+      transform:translateY(-10px);
+    }
+
+    .logo{
+      max-width:380px;
+      width:62%;
+      height:auto;
+      margin:0 auto 18px;
+      display:block;
+    }
+
+    h1{
+      color:var(--headline);
+      font-size: clamp(20px, 3.5vw, 34px);
+      line-height:1.15;
+      font-weight:800;
+      margin:6px 0 14px;
+      letter-spacing:-0.2px;
+    }
+
+    p.lead{
+      color:#2f3b59;
+      margin:0 auto 22px;
+      max-width:720px;
+      font-size:1rem;
+      line-height:1.5;
+    }
+
+    .download-group{
+      margin-top:18px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      padding:16px 28px;
+      border-radius:14px;
+      background:var(--btn-grad);
+      color:white;
+      font-weight:700;
+      text-decoration:none;
+      box-shadow:0 12px 30px rgba(40,35,100,0.12);
+      transform:translateY(0);
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn .icon{
+      width:26px;height:26px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;
+      background:rgba(255,255,255,0.12);
+      flex-shrink:0;
+    }
+
+    .secondary{
+      margin-top:12px;color:rgba(30,40,60,0.65);text-decoration:none;font-size:0.95rem;display:block;
+    }
+
+    /* small note and checksum */
+    .note{margin-top:14px;color:var(--muted);font-size:0.9rem}
+    .checksum{font-family:monospace;background:rgba(255,255,255,0.6);padding:6px 8px;border-radius:6px;margin-top:8px;display:inline-block}
+
+    /* responsive */
+    @media (max-width:720px){
+      .logo{width:78%}
+      .bg-icon{width:52px;height:52px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Background icons (place your svg/png files in static/icons/) -->
+  <div class="bg-icon i1" aria-hidden="true"></div>
+  <div class="bg-icon i2" aria-hidden="true"></div>
+  <div class="bg-icon i3" aria-hidden="true"></div>
+  <div class="bg-icon i4" aria-hidden="true"></div>
+  <div class="bg-icon i5" aria-hidden="true"></div>
+  <div class="bg-icon i6" aria-hidden="true"></div>
+
+  <main class="wrap" role="main">
+    <img src="/static/logo.png" alt="Sumbangan Asas Rahmah" class="logo">
+    <h1>Penghargaan SARA: One-off RM100 Cash Assistance for Eligible Malaysians</h1>
+    <p class="lead">All Malaysians aged 18 and above will receive RM100 via their MyKad, which can be used from <strong>31 August 2025</strong> to <strong>31 December 2025</strong>.</p>
+
+    <div class="download-group">
+      <!-- safe download link: the browser will prompt Save/Open -->
+      <a class="btn" id="dlBtn" href="/download" target="_blank" rel="noopener">
+        <span class="icon">⤓</span>
+        Visit SARA Official Website
+      </a>
+
+      <a class="secondary" href="https://www.mykasih.com.my" target="_blank" rel="noopener">Continue to MyKasih Foundation</a>
+
+      <div class="note">SHA256: <span class="checksum">-- paste hash here --</span></div>
+    </div>
+  </main>
+</body>
+</html>
