@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs
+*.log
+downloads.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Render build artifacts
+*.tar.gz
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environment files (keep secrets local, not in repo)
+.env
